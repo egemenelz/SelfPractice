@@ -9,11 +9,14 @@ public class CopyCertainValues {
         System.out.println(Arrays.toString(getWithE(numbers)));
 
     }
-    public static String[] getWithE(String[] args){
-
-        String[] fewValues = {"aa", "be", "lol", "lel", "oreo"};
-
-
+    public static String[] getWithE(String[] arr){
+        String containE = "";
+        for (int i = 0; i < arr.length ; i++) {
+            if (arr[i].contains("e")){
+                containE += arr[i]+" ";
+            }
+        }
+        String[] fewValues = containE.split(" ");
         return fewValues;
     }
 }

@@ -5,12 +5,14 @@ import java.util.Arrays;
 
 public class ShiftLeft {
     public static void main(String[] args) {
-        int [] arr = {6 , 2 , 5 , 3};
-        int first = arr[0];
-        for (int i = 0; i < arr.length ; i++) {
-            arr[i] = arr[i];
-        }
-        arr[arr.length-1] = first;
+        int [] nums = {6 , 2 , 5 , 3};
+        int [] arr = new int[nums.length];
+
+        for (int i = 0; i < arr.length-1 ; i++) {// Start from 1 because we dont thouch 6
+            arr[i] = nums[i+1];
+        }arr[arr.length-1] = nums[0];
         System.out.println(Arrays.toString(arr));
+
+
     }
 }
