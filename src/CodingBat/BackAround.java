@@ -3,10 +3,12 @@ package CodingBat;
 public class BackAround {
     public static void main(String[] args) {
 
-        System.out.println("cat = " + backAround("cat"));
+        System.out.println(backAround("code"));
     }
     public static String backAround(String str){
-        char lastchar = str.charAt(str.length()-1);
-        return lastchar+str+lastchar;
+        String temp = "";
+        for(int i = str.length()-1; i >=0; i--){
+            temp +=str.charAt(i);
+        }return temp;
     }
 }
